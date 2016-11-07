@@ -10,75 +10,42 @@
 		.mytable {
 			font-family: Arial, Helvetica, sans-serif;
 			color: #777;
-
+			border: 1px solid #ccc;
 		}
 		.mytable td, .mytable th {
-			width: 25px;
+			width: 28px;
 			height: 25px;
 			vertical-align: middle;
 			text-align: center;
-
+			border: 1px solid #ddd;
 		}
 	</style>
 </head>
 <body>
+<table border="0" cellspacing="0" cellpadding="0" class="mytable">
+	<tr>
+		<th></th>
+		<?php 
+			for($i=1; $i<=9; $i++) 
+			{
+				echo "<th>$i</th>";
+			}
+		?>  
+	</tr>
 
+<?php 
+	for($j=1; $j<=9; $j++) 
+	{
+		echo "<tr><th>$j</th>";
 
-<table class="mytable" border="1" bordercolor="#bbb" cellpadding="0" cellspacing="0">
-
-<tr>
-	<th></th>
-	<?php 
-		for($i=1; $i<=9; $i++) {
-			echo "<th>$i</th>";
+		for($m=1; $m<=9; $m++) 
+		{
+			echo "<td>" . $m * $j . "</td>";
 		}
-	?>  
-</tr>
 
-<?php for($j=1,$m = 1; $j<=9, $m<=9; $j++, $m++) {
-
-	echo "<tr>";
-	echo "<th>$j</th>";
-	echo "<td>" . $m . "</td>";
-	echo "</tr>";
-}
+		echo "</tr>";
+	}
 ?>
-
-
-
-<!-- 
-
-
-<?php //for($i=1; $i<=9; $i++)
-      { ?>
-      <tr>
-         <th><?= $i ?></th>
-      </tr>
-<?php } ?>
-
-
-
-<?php //for($j=1; $j<=9; $j++)
-      { ?>
-         <th><?= $j ?></th>
-<?php    } ?>
-      </tr>
-
-
-
- -->
-
-
-
-
 </table>
-
-
-
-
-
-
-
-
 </body>
 </html>
