@@ -1,0 +1,21 @@
+error (2002) - Means the supplied host value for DB_HOST is incorrect
+error (1045) - Means the supplied value for either the Username or Password are incorrect
+error (1049) - Means the supplied value for the database is invalid / wrong
+
+
+include(); - Will continue to process the code after it. Even if the file being included doesn't exist, it continues with the code after it and it will just output a Warning.
+
+	You can use inclued(); multiple times and it will paste what is being called, multiple times
+
+
+
+require(); - Won't coninue to process the code after it. If the file being required doesn't exist, it stops at that point and will output Errors.
+	
+	You can use inclued(); multiple times and it will paste what is being called, multiple times
+
+
+
+include_once(); In will include the file being called on, once.
+
+
+require_once(); In will require the file being called on, once
